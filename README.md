@@ -1,4 +1,3 @@
-
 # Библиотека для работы с API Boxberry для PHP #
 
 ## Требования ##
@@ -11,7 +10,7 @@ http://boxberry.ru/business_solutions/it_solutions/files/api_boxberry.pdf
 ## Подключение библиотеки и инициализация ##
 ```php
 <?php
-    require_once 'boxberry_api/src/autoload.php'; // или свой загрузчик, если есть
+    require_once 'boxberry_api/autoload.php'; // или свой загрузчик, если есть
 
     define('API_KEY', '<Ключ АПИ>');
 
@@ -48,7 +47,7 @@ http://boxberry.ru/business_solutions/it_solutions/files/api_boxberry.pdf
      try {
          $answer = $client->execute($parselCreate);
      } catch (Exception $e) {
-
+        
      }
 ?>
 ```

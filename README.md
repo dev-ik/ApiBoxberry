@@ -10,12 +10,11 @@ http://boxberry.ru/business_solutions/it_solutions/files/api_boxberry.pdf
 ## Подключение библиотеки и инициализация ##
 ```php
 <?php
-    require_once 'boxberry_api/autoload.php'; // или свой загрузчик, если есть
-
-    define('API_KEY', '<Ключ АПИ>');
-
-         $client = new \Boxberry\Client\Client();
-         $client->setKey(API_KEY);
+   ...
+    require_once 'boxberry_api/autoload.php';
+    $client = new \Boxberry\Client\Client();
+    $client->setKey('<Ключ АПИ>');
+    ...
 ?>
 ```
 ## Использование ##
@@ -26,11 +25,8 @@ http://boxberry.ru/business_solutions/it_solutions/files/api_boxberry.pdf
      ...
      $listStatusesRequest  = $client->getListStatuses();
      $listStatusesRequest->setImId('<Номер отправления>');
-     try {
-        $listStatusesCollection = $client->execute($listStatusesRequest);
-     } catch (Exception $e) {
-
-     }
+     $listStatusesCollection = $client->execute($listStatusesRequest);
+     ...
 ?>
 ```
 ### Создание отправления ###
@@ -40,27 +36,19 @@ http://boxberry.ru/business_solutions/it_solutions/files/api_boxberry.pdf
      $parselCreate  = $client->getParselCreate();
      $parsel = new \Boxberry\Models\Parsel();
      /*
-        Установка полей отправления из базы
+        Установка полей отправления
      */
      $parselCreate->setParsel($parsel);
-
-     try {
-         $answer = $client->execute($parselCreate);
-     } catch (Exception $e) {
-        
-     }
+     $response = $client->execute($parselCreate);
+     ...
 ?>
 ```
 ### Получение списка городов ###
 ```php
 <?php
-     ...
+    ...
     $listCities  = $client->getListCities();
-
-    try {
-        $listCitiesCollection = $client->execute($listCities);
-    } catch (Exception $e) {
-
-    }
+    $listCitiesCollection = $client->execute($listCities);
+    ...
 ?>
 ```

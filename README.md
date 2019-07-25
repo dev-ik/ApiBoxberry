@@ -5,7 +5,7 @@
 * [CURL](http://php.net/manual/ru/book.curl.php)
 
 ## Документация ##
-http://boxberry.ru/business_solutions/it_solutions/files/api_boxberry.pdf
+http://boxberry.ru/business_solutions/it_solutions/files/api_boxberry.pdf (**not found**)
 
 ## Подключение библиотеки и инициализация ##
 ```php

@@ -384,7 +384,7 @@ class Point extends  ShortPoint
     /**
      * @return mixed
      */
-    public function getTarrifZone()
+    public function getTariffZone()
     {
         return $this->tarrifZone;
     }
@@ -392,7 +392,7 @@ class Point extends  ShortPoint
     /**
      * @param mixed $tarrifZone
      */
-    public function setTarrifZone($tarrifZone)
+    public function setTariffZone($tarrifZone)
     {
         $this->tarrifZone = $tarrifZone;
     }

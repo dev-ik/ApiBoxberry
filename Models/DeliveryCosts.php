@@ -43,10 +43,7 @@ class DeliveryCosts extends AbstractModel
      * @var string
      */
     protected $delivery_period = null;
-    /**
-     * @var string
-     */
-    protected $ordersum = null;
+
     /**
      * DeliveryCosts constructor.
      * @param array $data
@@ -61,7 +58,6 @@ class DeliveryCosts extends AbstractModel
         $this->price_base = $data['price_base'];
         $this->price_service = $data['price_service'];
         $this->delivery_period = $data['delivery_period'];
-        $this->ordersum = $data['ordersum'];
         parent::__construct();
     }
 
@@ -131,20 +127,5 @@ class DeliveryCosts extends AbstractModel
     public function setDeliveryPeriod($delivery_period)
     {
         $this->delivery_period = $delivery_period;
-    }
-    /**
-     * @return string
-     */
-    public function getOrderSum()
-    {
-        return $this->ordersum;
-    }
-
-    /**
-     * @param string $delivery_period
-     */
-    public function setOrderSum($ordersum)
-    {
-        $this->delivery_period = $ordersum;
     }
 }

@@ -32,6 +32,71 @@ class City extends AbstractModel
     protected $code = null;
 
     /**
+     * @var int
+     */
+    protected $receptionLaP;
+
+    /**
+     * @var int
+     */
+    protected $deliveryLaP;
+
+    /**
+     * @var int
+     */
+    protected $reception;
+
+    /**
+     * @var int
+     */
+    protected $foreignReceptionReturns;
+
+    /**
+     * @var int
+     */
+    protected $terminal;
+
+    /**
+     * @var string
+     */
+    protected $kladr;
+
+    /**
+     * @var string
+     */
+    protected $countryCode;
+
+    /**
+     * @var string
+     */
+    protected $uniqName;
+
+    /**
+     * @var string
+     */
+    protected $district;
+
+    /**
+     * @var string
+     */
+    protected $prefix;
+
+    /**
+     * @var int
+     */
+    protected $courierReception;
+
+    /**
+     * @var int
+     */
+    protected $courierDelivery;
+
+    /**
+     * @var
+     */
+    protected $pickupPoint;
+
+    /**
      * @return string
      */
     public function getName()

@@ -36,6 +36,11 @@ class CourierDeliveryShort extends AbstractModel
     protected $area = null;
 
     /**
+     * @var ?float
+     */
+    protected $deliveryPeriod = null;
+
+    /**
      * @return string
      */
     public function getCity()
@@ -81,6 +86,18 @@ class CourierDeliveryShort extends AbstractModel
     public function setArea($area)
     {
         $this->area = $area;
+    }
+
+    public function setDeliveryPeriod($deliveryPeriod) {
+        if(!is_numeric($deliveryPeriod)) {
+            $this->deliveryPeriod = null;
+        } else {
+            $this->deliveryPeriod = floatval($deliveryPeriod);
+        }
+    }
+
+    public function getDeliveryPeriod() {
+        return $this->deliveryPeriod;
     }
 
 }

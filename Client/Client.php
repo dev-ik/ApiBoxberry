@@ -331,7 +331,7 @@ class Client
 				HTTP::setCacheTimeLife(0);
 			}
             $data = array_merge($data, $serializer->toArray($request));
-            $answer = HTTP::post($this->api_url, $data)->getAnswer();
+            $answer = HTTP::get($this->api_url, $data)->getAnswer();
 
         }
         unset($serializer);

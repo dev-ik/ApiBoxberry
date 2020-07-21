@@ -41,12 +41,12 @@ class Client
     /**
      * @var string
      */
-    protected $production_url = 'https://api.boxberry.de/json.php';
+    protected $production_url = 'https://api.boxberry.ru/json.php';
 
     /**
      * @var string
      */
-    protected $debug_url = 'http://test.api.boxberry.de/json.php';
+    protected $debug_url = 'https://test-ecom.boxberry.ru/json.php';
 
     /**
      * @var bool
